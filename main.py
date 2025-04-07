@@ -3,6 +3,7 @@ from tkinter import messagebox
 
 #This is a kanban board im going to turn into moscow
 # I already started on this locally but I didnt realize we were supposed to show progress so I uploaded it
+#This is to test pushing code from github desktop to github website
 
 class FeaturePrio:
     def __init__(self, root):
@@ -16,7 +17,7 @@ class FeaturePrio:
         self.must_frame = self.create_frame("Must Have", 0, "#ef233c")
         self.should_frame = self.create_frame("Should Have", 1, "#ffd166")
         self.could_frame = self.create_frame("Could Have", 2, "#06d6a0")
-        self.wont_frame = self.create_frame("Wont Have", 2, "#06d6a0")
+        self.wont_frame = self.create_frame("Wont Have", 3, "#06d6a0")
         
         # Input field and add button
         self.entry = tk.Entry(self.root, width=40, font=("Arial", 14),
