@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 #This is a kanban board im going to turn into moscow
+# I already started on this locally but I didnt realize we were supposed to show progress so I uploaded it
 
 class FeaturePrio:
     def __init__(self, root):
