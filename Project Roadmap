@@ -5,5 +5,7 @@
 - [x] Decided between moscow or rice *edit* going to use moscow instead because you can use rice on Jira and I think the math would be too hard
 - [x] Find out what im getting myself into
 - [x] Find a couple good tutorial videos
-- [ ] Turn kanban board into moscow
+- [x] Turn kanban board into moscow
 - [ ] tkinter looks ugly so at some point follow this and make it look better https://medium.com/@fareedkhandev/modern-gui-using-tkinter-12da0b983e22
+- [ ] Make text drop a line if its longer than the width of the box
+- [ ] Make it to where you can drag and drop tasks between boxes
