@@ -12,4 +12,4 @@
 - [ ] Make it to where you cant enter the "enter a task here prompt
 - [ ] BIG Maybe but, make it to where you can save and re open saved project files
 - [ ] potentially remake it from scratch using customtkinter
-- [ ] Make it to where you can enter a task with enter instead of having to click "add task"
+- [x] Make it to where you can enter a task with enter instead of having to click "add task"

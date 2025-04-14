@@ -3,8 +3,6 @@ from tkinter import messagebox
 
 # I already started on this locally but I didnt realize we were supposed to show progress so I uploaded it
 
-
-
 class FeaturePrio:
     def __init__(self, root):
         self.root = root
@@ -31,6 +29,8 @@ class FeaturePrio:
 
         self.entry.grid(row=1, column=0, columnspan=2, pady=10, padx=10,
                         sticky="ew")
+        self.entry.bind('<Return>', lambda event: self.add_task())
+
         self.add_button = tk.Button(
             self.root,
             text="Add Task",
@@ -119,6 +119,7 @@ class FeaturePrio:
 
 
 
+
     
     def move_task(self, from_frame, to_frame):
         selected = from_frame.listbox.curselection()
@@ -154,4 +155,4 @@ if __name__ == "__main__":
                              weight=1)
     root.grid_rowconfigure(0, weight=1)
     app = FeaturePrio(root)
-    root.mainloop() 
+    root.mainloop()
