@@ -27,6 +27,8 @@ class FeaturePrio:
         # Input field and add button
         self.entry = tk.Entry(self.root, width=40, font=("Segoe UI", 14),
                               bg="#FBFBFB", fg="#000000")
+        self.entry.insert(0, "Enter a task here")
+
         self.entry.grid(row=1, column=0, columnspan=2, pady=10, padx=10,
                         sticky="ew")
         self.add_button = tk.Button(
@@ -73,28 +75,28 @@ class FeaturePrio:
 
         if col== 0:  # Must Have Column
             move_button = tk.Button(
-                frame, text="Move to Should Have", bg="#FBFBFB",
+                frame, text="Move to Should Have ->", bg="#FBFBFB",
                 font=("Segoe UI", 10),
                 command=lambda: self.move_task(self.must_frame,
                                                self.should_frame)
             )
         elif col == 1: # Should Have column
             move_button = tk.Button(
-                frame, text="Move to Could Have", bg="#FBFBFB",
+                frame, text="Move to Could Have ->", bg="#FBFBFB",
                 font=("Segoe UI", 10),
                 command=lambda: self.move_task(self.should_frame,
                                                self.could_frame)
             )
         elif col == 2: # Could Have column
             move_button = tk.Button(
-                frame, text="Move to Wont Have", bg="#FBFBFB",
+                frame, text="Move to Wont Have ->", bg="#FBFBFB",
                 font=("Segoe UI", 10),
                 command=lambda: self.move_task(self.could_frame,
                                                self.wont_frame)
             )
         else: # Wont Have Column
             move_button = tk.Button(
-                frame, text="Delete Task", bg="#FBFBFB",
+                frame, text="  Delete Task  ", bg="#FBFBFB",
                 font=("Segoe UI", 10),
                 command=lambda: self.delete_task(self.wont_frame)
             )

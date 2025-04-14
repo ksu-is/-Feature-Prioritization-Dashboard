@@ -6,6 +6,10 @@
 - [x] Find out what im getting myself into
 - [x] Find a couple good tutorial videos
 - [x] Turn kanban board into moscow
-- [ ] tkinter looks ugly so at some point follow this and make it look better https://medium.com/@fareedkhandev/modern-gui-using-tkinter-12da0b983e22
+- [x] tkinter looks ugly so at some point follow this and make it look better https://medium.com/@fareedkhandev/modern-gui-using-tkinter-12da0b983e22 *edit* NOT USING THIS, there are things that exist in tkinter that dont exist in customtkinter and changing the syntax wasnt as easy as I thought.
 - [ ] Make text drop a line if its longer than the width of the box
 - [ ] Make it to where you can drag and drop tasks between boxes
+- [ ] Make it to where you cant enter the "enter a task here prompt
+- [ ] BIG Maybe but, make it to where you can save and re open saved project files
+- [ ] potentially remake it from scratch using customtkinter
+- [ ] Make it to where you can enter a task with enter instead of having to click "add task"
