@@ -26,7 +26,7 @@ class FeaturePrio:
         self.entry = tk.Entry(self.root, width=40, font=("Segoe UI", 14),
                               bg="#FBFBFB", fg="#000000")
         self.entry.insert(0, "Enter a task here")
-
+        self.entry.bind("<FocusIn>", self.clear_placeholder)
         self.entry.grid(row=1, column=0, columnspan=2, pady=10, padx=10,
                         sticky="ew")
         self.entry.bind('<Return>', lambda event: self.add_task())
@@ -42,8 +42,17 @@ class FeaturePrio:
         )
         self.add_button.grid(row=1, column=2, pady=10, padx=10)
 
+        for frame in [self.must_frame, self.should_frame, self.could_frame, self.wont_frame]:
+            listbox = frame.listbox
+            listbox.bind("<Button-1>", self.start_drag)
+            listbox.bind("<B1-Motion>", self.do_drag)
+            listbox.bind("<ButtonRelease-1>", self.stop_drag)
 
+        self.drag_data = None
 
+    def clear_placeholder(self, event):
+            if self.entry.get() == "Enter a task here":
+                self.entry.delete(0, tk.END)
 
 
     def create_frame(self, title, col, bg_color):
@@ -106,7 +115,8 @@ class FeaturePrio:
     
 
 
-
+#Click and drag was made by chatgpt. I couldnt find any tutorials, documentation, or forums on how to click and drag
+#I even asked chatgpt if i can find tutorials for me or to refine my search terms so i can get better results and It coulndt but it was able to do it somehow
 
     def add_task(self):
         task = self.entry.get().strip()
@@ -144,7 +154,28 @@ class FeaturePrio:
         else:
             messagebox.showerror("Error", "No Task selected to delete!")
 
+    def start_drag(self, event):
+        widget = event.widget
+        index = widget.nearest(event.y)
+        if index >= 0:
+            self.drag_data = {
+                "widget": widget,
+                "index": index,
+                "text": widget.get(index),
+            }
 
+    def do_drag(self, event):
+        pass
+
+    def stop_drag(self, event):
+        if not self.drag_data:
+            return
+
+        drop_widget = event.widget.winfo_containing(event.x_root, event.y_root)
+        if isinstance(drop_widget, tk.Listbox) and drop_widget != self.drag_data["widget"]:
+            self.drag_data["widget"].delete(self.drag_data["index"])
+            drop_widget.insert(tk.END, self.drag_data["text"])
+        self.drag_data = None
 
 
 
