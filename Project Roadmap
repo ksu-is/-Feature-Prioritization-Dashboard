@@ -7,9 +7,13 @@
 - [x] Find a couple good tutorial videos
 - [x] Turn kanban board into moscow
 - [x] tkinter looks ugly so at some point follow this and make it look better https://medium.com/@fareedkhandev/modern-gui-using-tkinter-12da0b983e22 *edit* NOT USING THIS, there are things that exist in tkinter that dont exist in customtkinter and changing the syntax wasnt as easy as I thought.
-- [ ] Make text drop a line if its longer than the width of the box
-- [x] Make it to where you can drag and drop tasks between boxes *edit* I cant find ANY tutorials, documentation, or forums discussing this.
+- [x] Make text drop a line if its longer than the width of the box *Edit* not doing this because if its too long you can just resize the window
+- [x] Make it to where you can drag and drop tasks between boxes *edit* I cant find ANY tutorials, documentation, or forums discussing this..... used chatgpt
 - [x] Make it to where you cant enter the "enter a task here prompt
-- [ ] BIG Maybe but, make it to where you can save and re open saved project files  *Edit* have to use json or somethign i think
-- [ ] potentially remake it from scratch using customtkinter
-- [x] Make it to where you can enter a task with enter instead of having to click "add task"
+- [x] BIG Maybe but, make it to where you can save and re open saved project files *Edit* This has been a rabbithole.
+- [x] https://www.youtube.com/watch?v=73N2oZLVthw NO
+- [x] https://www.youtube.com/watch?v=Klp2Q462chU&t=30s NO
+- [x] https://www.geeksforgeeks.org/python-asksaveasfile-function-in-tkinter/ maybe
+- [x] https://www.youtube.com/watch?v=Vm0ivVxNaA8 Maybee 
+- [x] potentially remake it from scratch using customtkinter *Edit* im in to deep now
+- [x] Make it to where you can enter a task with enter instead of having to click "add task" 

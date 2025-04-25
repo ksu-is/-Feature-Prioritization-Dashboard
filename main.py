@@ -114,10 +114,6 @@ class FeaturePrio:
         return frame
     
 
-
-#Click and drag was made by chatgpt. I couldnt find any tutorials, documentation, or forums on how to click and drag
-#I even asked chatgpt if i can find tutorials for me or to refine my search terms so i can get better results and It coulndt but it was able to do it somehow
-
     def add_task(self):
         task = self.entry.get().strip()
         if task:
@@ -126,11 +122,6 @@ class FeaturePrio:
         else:
             messagebox.showerror("Error", "Task cannot be empty!")
 
-
-
-
-
-    
     def move_task(self, from_frame, to_frame):
         selected = from_frame.listbox.curselection()
         if selected:
@@ -139,10 +130,6 @@ class FeaturePrio:
             to_frame.listbox.insert(tk.END, task)
         else:
             messagebox.showerror("Error", "No task selected to move!")
-
-
-
-
 
     def delete_task(self, frame):
         selected = frame.listbox.curselection()
@@ -153,6 +140,12 @@ class FeaturePrio:
                                 f"task '{task}' has been deleted!")
         else:
             messagebox.showerror("Error", "No Task selected to delete!")
+
+
+
+
+#Click and drag was made by chatgpt. I couldnt find any tutorials, documentation, or forums on how to click and drag
+#I even asked chatgpt if i can find tutorials for me or to refine my search terms so i can get better results and It coulndt but it was able to do it somehow
 
     def start_drag(self, event):
         widget = event.widget
@@ -177,7 +170,7 @@ class FeaturePrio:
             drop_widget.insert(tk.END, self.drag_data["text"])
         self.drag_data = None
 
-
+    
 
 # Initialize the app
 if __name__ == "__main__":
