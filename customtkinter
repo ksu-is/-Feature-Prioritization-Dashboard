@@ -154,7 +154,7 @@ class FeaturePrio:
             task = frame.listbox.get(selected)
             frame.listbox.delete(selected)
             messagebox.showinfo("Task Deleted",
-                                f"task '{task}' has been deleted!")
+                                f"Task '{task}' has been deleted!")
         else:
             messagebox.showerror("Error", "No Task selected to delete!")
 
